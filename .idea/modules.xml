@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aut-app.iml" filepath="$PROJECT_DIR$/aut-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mutants.iml" filepath="$PROJECT_DIR$/mutants.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tp-tecnologias-informaticas.iml" filepath="$PROJECT_DIR$/tp-tecnologias-informaticas.iml" />
+    </modules>
+  </component>
+</project>
