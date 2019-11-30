@@ -1,0 +1,14 @@
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/controller/EmployeeController.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/exception/GlobalExceptionHandler.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/repository/UserRepository.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/repository/EmployeeRepository.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/Application.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/exception/ResourceNotFoundException.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/SpringRestClient.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/controller/UserController.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/model/User.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/model/Employee.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/controller/ProductController.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/repository/ProductRepository.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/model/Product.java
+/Users/azorzini/projects/facultad/tp-tecnologias-informaticas/src/main/java/org/alvizeta/tptecnologiasinformaticas/exception/ErrorDetails.java

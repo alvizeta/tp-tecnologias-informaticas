@@ -12,7 +12,7 @@ import javax.servlet.ServletException;
 
 
 @SpringBootApplication
-public class Application implements WebApplicationInitializer {
+public class Application {
 
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
@@ -23,8 +23,8 @@ public class Application implements WebApplicationInitializer {
 		SpringApplication.run(Application.class, args);
 	}
 
-	@Override
+/*	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 
-	}
+	}*/
 }
