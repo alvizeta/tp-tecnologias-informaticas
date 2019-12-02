@@ -18,13 +18,13 @@ public class Product {
     @Column(name = "price", nullable = false)
     private String price;
 
-    @Column(name = "description", nullable = false)
+    @Column(name = "description")
     private String description;
 
     @Column(name = "category", nullable = false)
     private String category;
 
-    @Column(name = "image", nullable = false)
+    @Column(name = "image")
     @Lob
     private Byte[] image;
 

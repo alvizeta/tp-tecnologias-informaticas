@@ -16,7 +16,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "last_modified_by", nullable = false)
+    @Column(name = "last_modified_by")
     private String lastModifiedBy;
 
     @Column(name = "email", nullable = false)

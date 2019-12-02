@@ -11,8 +11,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import org.alvizeta.tptecnologiasinformaticas.model.Employee;
-
 public class SpringRestClient {
 
 	private static final String GET_EMPLOYEES_ENDPOINT_URL = "http://localhost:8080/api/v1/employees";
@@ -23,7 +21,7 @@ public class SpringRestClient {
 	private static RestTemplate restTemplate = new RestTemplate();
 
 	public static void main(String[] args) {
-		SpringRestClient springRestClient = new SpringRestClient();
+/*		SpringRestClient springRestClient = new SpringRestClient();
 		
 		// Step1: first create a new employee
 		springRestClient.createEmployee();
@@ -38,10 +36,10 @@ public class SpringRestClient {
 		springRestClient.updateEmployee();
 		
 		// Step5: Delete employee with id = 1
-		springRestClient.deleteEmployee();
-	}
+		springRestClient.deleteEmployee();*/
+	}}
 
-	private void getEmployees() {
+/*	private void getEmployees() {
 
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -88,4 +86,4 @@ public class SpringRestClient {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.delete(DELETE_EMPLOYEE_ENDPOINT_URL, params);
 	}
-}
+}*/

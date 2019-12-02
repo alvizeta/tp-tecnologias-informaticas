@@ -36,18 +36,11 @@ public class UserController {
         return userRepository.save(user);
     }
 
-    @PutMapping("/users/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable(value = "id") Long userId,
-                                                   @Valid @RequestBody User user) throws ResourceNotFoundException {
-        User userFound = userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found for this id :: " + userId));
-
-        userFound.setEmail(user.getEmail());
-        userFound.setUsername(user.getPassword());
-        userFound.setLastModifiedBy(user.getLastModifiedBy());
-        userFound.setPassword(user.getPassword());
-        final User updatedUser = userRepository.save(user);
-        return ResponseEntity.ok(updatedUser);
+    @RequestMapping(value="/users/{id}", method=RequestMethod.PUT,
+            produces="application/json", consumes="application/json")
+    public User updateUser (@RequestBody User user)
+    {
+        return userRepository.save(user);
     }
 
     @DeleteMapping("/users/{id}")

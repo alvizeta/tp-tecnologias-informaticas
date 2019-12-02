@@ -3,11 +3,13 @@ package org.alvizeta.tptecnologiasinformaticas.controller;
 import org.alvizeta.tptecnologiasinformaticas.exception.ResourceNotFoundException;
 import org.alvizeta.tptecnologiasinformaticas.model.Product;
 import org.alvizeta.tptecnologiasinformaticas.repository.ProductRepository;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,9 +21,13 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @GetMapping("/products")
-    public List<Product> getAllProducts() {
+    public List<Product> getAllProducts(@RequestParam(required = false) String category) {
+        if(category != null){
+            return productRepository.findAllByCategory(category);
+        }
         return productRepository.findAll();
     }
+
 
     @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable(value = "id") Long productId)
@@ -36,19 +42,11 @@ public class ProductController {
         return productRepository.save(product);
     }
 
-    @PutMapping("/products/{id}")
-    public ResponseEntity<Product> updateProduct(@PathVariable(value = "id") Long productId,
-                                                   @Valid @RequestBody Product productDetails) throws ResourceNotFoundException {
-        Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new ResourceNotFoundException("Product not found for this id :: " + productId));
-
-        product.setName(productDetails.getName());
-        product.setCategory(productDetails.getCategory());
-        product.setDescription(productDetails.getDescription());
-        product.setPrice(productDetails.getPrice());
-        product.setImage(productDetails.getImage());
-        final Product updatedProduct = productRepository.save(product);
-        return ResponseEntity.ok(updatedProduct);
+    @RequestMapping(value="/products/{id}", method=RequestMethod.PUT,
+            produces="application/json", consumes="application/json")
+    public Product updateProduct (@RequestBody Product product)
+    {
+        return productRepository.save(product);
     }
 
     @DeleteMapping("/products/{id}")
